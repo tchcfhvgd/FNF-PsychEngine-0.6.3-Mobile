@@ -17,6 +17,7 @@ class ClientPrefs {
 	public static var mobileCEx:Bool = false;
 	public static var hitboxType:String = "No Gradient";
 	public static var hitboxPos:Bool = true;
+	public static var popUpScore:Bool = true;
 	public static var downScroll:Bool = false;
 	public static var middleScroll:Bool = false;
 	public static var opponentStrums:Bool = true;
@@ -114,6 +115,7 @@ class ClientPrefs {
 		FlxG.save.data.mobileCEx = mobileCEx;
 		FlxG.save.data.hitboxType = hitboxType;
 		FlxG.save.data.hitboxPos = hitboxPos;
+		FlxG.save.data.popUpScore = popUpScore;
 		FlxG.save.data.downScroll = downScroll;
 		FlxG.save.data.middleScroll = middleScroll;
 		FlxG.save.data.opponentStrums = opponentStrums;
@@ -161,6 +163,31 @@ class ClientPrefs {
 	}
 
 	public static function loadPrefs() {
+		#if mobile
+		if(FlxG.save.data.screensaver != null) {
+			screensaver = FlxG.save.data.screensaver;
+		}
+		#if android
+		if(FlxG.save.data.storageType != null) {
+			storageType = FlxG.save.data.storageType;
+		}
+		#end
+		#end
+		if(FlxG.save.data.mobileCAlpha != null) {
+			mobileCAlpha = FlxG.save.data.mobileCAlpha;
+		}
+		if(FlxG.save.data.mobileCEx != null) {
+			mobileCEx = FlxG.save.data.mobileCEx;
+		}
+		if(FlxG.save.data.hitboxType != null) {
+			hitboxType = FlxG.save.data.hitboxType;
+		}
+		if(FlxG.save.data.hitboxPos != null) {
+			hitboxPos = FlxG.save.data.hitboxPos;
+		}
+		if(FlxG.save.data.popUpScore != null) {
+			popUpScore = FlxG.save.data.popUpScore;
+		}
 		if(FlxG.save.data.downScroll != null) {
 			downScroll = FlxG.save.data.downScroll;
 		}
@@ -260,28 +287,6 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.pauseMusic != null) {
 			pauseMusic = FlxG.save.data.pauseMusic;
-		}
-		#if mobile
-		if(FlxG.save.data.screensaver != null) {
-			screensaver = FlxG.save.data.screensaver;
-		}
-		#if android
-		if(FlxG.save.data.storageType != null) {
-			storageType = FlxG.save.data.storageType;
-		}
-		#end
-		#end
-		if(FlxG.save.data.mobileCAlpha != null) {
-			mobileCAlpha = FlxG.save.data.mobileCAlpha;
-		}
-		if(FlxG.save.data.mobileCEx != null) {
-			mobileCEx = FlxG.save.data.mobileCEx;
-		}
-		if(FlxG.save.data.hitboxType != null) {
-			hitboxType = FlxG.save.data.hitboxType;
-		}
-		if(FlxG.save.data.hitboxPos != null) {
-			hitboxPos = FlxG.save.data.hitboxPos;
 		}
 		if(FlxG.save.data.gameplaySettings != null)
 		{
