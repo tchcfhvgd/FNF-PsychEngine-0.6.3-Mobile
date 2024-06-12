@@ -73,6 +73,13 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 			true);
 		addOption(option);
 
+		var option:Option = new Option('Pop Up Score',
+			"If unchecked, hitting notes won't make \"sick\", \"good\".. and combo popups.",
+			'popUpScore',
+			'bool',
+			true);
+		addOption(option);
+
 		var option:Option = new Option('Disable Reset Button',
 			"If checked, pressing Reset won't do anything.",
 			'noReset',
