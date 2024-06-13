@@ -1421,7 +1421,7 @@ class FunkinLua {
 			final mobileC:mobile.flixel.FlxButton = @:privateAccess {(mobile.MobileControls.mode == "Hitbox") ? PlayState.instance.mobileControls.hitbox.hints[4] : PlayState.instance.mobileControls.virtualPad.buttonEx;}
 			return switch (name.toUpperCase()) {
 			case "SPACE":
-				mobileC.justPressed || Reflect.getProperty(FlxG.keys.justPressed, "SPACE");
+				ClientPrefs.mobileCEx ? mobileC.justPressed : false || Reflect.getProperty(FlxG.keys.justPressed, "SPACE");
 			default:
 				Reflect.getProperty(FlxG.keys.justPressed, name);
 			}
@@ -1431,7 +1431,7 @@ class FunkinLua {
 			final mobileC:mobile.flixel.FlxButton = @:privateAccess {(mobile.MobileControls.mode == "Hitbox") ? PlayState.instance.mobileControls.hitbox.hints[4] : PlayState.instance.mobileControls.virtualPad.buttonEx;}
 			return switch (name.toUpperCase()) {
 			case "SPACE":
-				mobileC.pressed || Reflect.getProperty(FlxG.keys.pressed, "SPACE");
+				ClientPrefs.mobileCEx ? mobileC.pressed : false || Reflect.getProperty(FlxG.keys.pressed, "SPACE");
 			default:
 				Reflect.getProperty(FlxG.keys.pressed, name);
 			}
@@ -1441,7 +1441,7 @@ class FunkinLua {
 			final mobileC:mobile.flixel.FlxButton = @:privateAccess {(mobile.MobileControls.mode == "Hitbox") ? PlayState.instance.mobileControls.hitbox.hints[4] : PlayState.instance.mobileControls.virtualPad.buttonEx;}
 			return switch (name.toUpperCase()) {
 			case "SPACE":
-				mobileC.justReleased || Reflect.getProperty(FlxG.keys.justReleased, "SPACE");
+				ClientPrefs.mobileCEx ? mobileC.justReleased : false || Reflect.getProperty(FlxG.keys.justReleased, "SPACE");
 			default:
 				Reflect.getProperty(FlxG.keys.justReleased, name);
 			}
@@ -1518,7 +1518,7 @@ class FunkinLua {
 				case 'back': key = PlayState.instance.getControl('BACK');
 				case 'pause': key = PlayState.instance.getControl('PAUSE');
 				case 'reset': key = PlayState.instance.getControl('RESET');
-				case 'space': key = mobileC.justPressed || FlxG.keys.justPressed.SPACE;//an extra key for convinience
+				case 'space': key = ClientPrefs.mobileCEx ? mobileC.justPressed : false || FlxG.keys.justPressed.SPACE;//an extra key for convinience
 			}
 			return key;
 		});
@@ -1530,7 +1530,7 @@ class FunkinLua {
 				case 'down': key = PlayState.instance.getControl('NOTE_DOWN');
 				case 'up': key = PlayState.instance.getControl('NOTE_UP');
 				case 'right': key = PlayState.instance.getControl('NOTE_RIGHT');
-				case 'space': key = mobileC.pressed || FlxG.keys.pressed.SPACE;//an extra key for convinience
+				case 'space': key = ClientPrefs.mobileCEx ? mobileC.pressed : false || FlxG.keys.pressed.SPACE;//an extra key for convinience
 			}
 			return key;
 		});
@@ -1542,7 +1542,7 @@ class FunkinLua {
 				case 'down': key = PlayState.instance.getControl('NOTE_DOWN_R');
 				case 'up': key = PlayState.instance.getControl('NOTE_UP_R');
 				case 'right': key = PlayState.instance.getControl('NOTE_RIGHT_R');
-				case 'space': key = mobileC.justReleased || FlxG.keys.justReleased.SPACE;//an extra key for convinience
+				case 'space': key = ClientPrefs.mobileCEx ? mobileC.justReleased : false || FlxG.keys.justReleased.SPACE;//an extra key for convinience
 			}
 			return key;
 		});
