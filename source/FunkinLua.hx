@@ -2835,6 +2835,7 @@ class FunkinLua {
 		Lua_helper.add_callback(lua, "menuJustPressed", FlxG.android.justPressed.MENU);
 		Lua_helper.add_callback(lua, "menuPressed", FlxG.android.pressed.MENU);
 		Lua_helper.add_callback(lua, "menuJustReleased", FlxG.android.justReleased.MENU);
+		Lua_helper.add_callback(lua, "getCurrentOrientation", () -> PsychJNI.getCurrentOrientationAsString());
 		Lua_helper.add_callback(lua, "setOrientation", function(orientation:Null<String>):Void
 		{
 			switch (orientation.toLowerCase())
