@@ -71,7 +71,7 @@ class MenuCharacterEditorState extends MusicBeatState
 		add(txtOffsets);
 
 		final buttonSpace:String = mobile.MobileControls.enabled ? 'A' : 'Space';
-		final buttonShift:String = mobile.MobileControls.enabled ? 'C' : 'shift'
+		final buttonShift:String = mobile.MobileControls.enabled ? 'C' : 'shift';
 
 		var tipText:FlxText = new FlxText(0, 540, FlxG.width,
 			'Arrow Keys - Change Offset (Hold $buttonShift for 10x speed)
