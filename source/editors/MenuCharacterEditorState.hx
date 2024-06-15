@@ -70,9 +70,12 @@ class MenuCharacterEditorState extends MusicBeatState
 		txtOffsets.alpha = 0.7;
 		add(txtOffsets);
 
+		final buttonSpace:String = mobile.MobileControls.enabled ? 'A' : 'Space';
+		final buttonShift:String = mobile.MobileControls.enabled ? 'C' : 'shift'
+
 		var tipText:FlxText = new FlxText(0, 540, FlxG.width,
-			"Arrow Keys - Change Offset (Hold shift for 10x speed)
-			\nSpace - Play \"Start Press\" animation (Boyfriend Character Type)", 16);
+			'Arrow Keys - Change Offset (Hold $buttonShift for 10x speed)
+			\n$buttonSpace - Play \"Start Press\" animation (Boyfriend Character Type)', 16);
 		tipText.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, CENTER);
 		tipText.scrollFactor.set();
 		add(tipText);
@@ -287,13 +290,13 @@ class MenuCharacterEditorState extends MusicBeatState
 			FlxG.sound.muteKeys = TitleState.muteKeys;
 			FlxG.sound.volumeDownKeys = TitleState.volumeDownKeys;
 			FlxG.sound.volumeUpKeys = TitleState.volumeUpKeys;
-			if(FlxG.keys.justPressed.ESCAPE) {
+			if(virtualPad.buttonB.justPressed || FlxG.keys.justPressed.ESCAPE) {
 				MusicBeatState.switchState(new editors.MasterEditorMenu());
 				FlxG.sound.playMusic(Paths.music('freakyMenu'));
 			}
 
 			var shiftMult:Int = 1;
-			if(virtualPad.buttonA.pressed || FlxG.keys.pressed.SHIFT) shiftMult = 10;
+			if(virtualPad.buttonC.pressed || FlxG.keys.pressed.SHIFT) shiftMult = 10;
 
 			if(virtualPad.buttonLeft.justPressed || FlxG.keys.justPressed.LEFT) {
 				characterFile.position[0] += shiftMult;
@@ -312,7 +315,7 @@ class MenuCharacterEditorState extends MusicBeatState
 				updateOffset();
 			}
 
-			if(virtualPad.buttonC.justPressed || FlxG.keys.justPressed.SPACE && curTypeSelected == 1) {
+			if(virtualPad.buttonA.justPressed || FlxG.keys.justPressed.SPACE && curTypeSelected == 1) {
 				grpWeekCharacters.members[curTypeSelected].animation.play('confirm', true);
 			}
 		}
