@@ -3521,6 +3521,7 @@ class HScript
 		#end
 		interp.variables.set('ShaderFilter', openfl.filters.ShaderFilter);
 		interp.variables.set('StringTools', StringTools);
+		interp.variables.set('SUtil', mobile.SUtil);
 
 		interp.variables.set('setVar', function(name:String, value:Dynamic)
 		{
