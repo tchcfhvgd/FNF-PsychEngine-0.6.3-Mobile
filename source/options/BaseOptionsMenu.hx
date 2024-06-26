@@ -240,7 +240,7 @@ class BaseOptionsMenu extends MusicBeatSubstate
 				}
 			}
 
-			if(controls.RESET)
+			if(virtualPad.buttonC.jutstPressed || controls.RESET)
 			{
 				for (i in 0...optionsArray.length)
 				{
