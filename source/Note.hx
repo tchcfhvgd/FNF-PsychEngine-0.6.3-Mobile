@@ -302,6 +302,7 @@ class Note extends FlxSprite
 			}
 		} else {
 			frames = Paths.getSparrowAtlas(blahblah);
+			setGraphicSize(Std.int(width * 0.9));
 			loadNoteAnims();
 			antialiasing = ClientPrefs.globalAntialiasing;
 		}
@@ -329,7 +330,7 @@ class Note extends FlxSprite
 			animation.addByPrefix(colArray[noteData] + 'hold', colArray[noteData] + ' hold piece');
 		}
 
-		setGraphicSize(Std.int(width * 0.5));
+		setGraphicSize(Std.int(width * 0.6));
 		updateHitbox();
 	}
 
