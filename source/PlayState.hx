@@ -3349,7 +3349,6 @@ class PlayState extends MusicBeatState
 					}
 				});
 			}
-			}
 			else
 			{
 				notes.forEachAlive(function(daNote:Note)
@@ -3358,6 +3357,7 @@ class PlayState extends MusicBeatState
 					daNote.wasGoodHit = false;
 				});
 			}
+		    }
 		}
 		checkEventNote();
 
