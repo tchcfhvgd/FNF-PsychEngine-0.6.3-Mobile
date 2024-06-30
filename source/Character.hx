@@ -246,6 +246,9 @@ class Character extends FlxSprite
 			}*/
 		}
 
+	        if (onCreate != null)
+			onCreate(this);
+
 		switch(curCharacter)
 		{
 			case 'pico-speaker':
