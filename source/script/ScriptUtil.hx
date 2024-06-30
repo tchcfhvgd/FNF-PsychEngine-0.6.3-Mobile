@@ -15,6 +15,7 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import haxe.Json;
+import flixel.addons.display.FlxRuntimeShader;
 import openfl.Lib;
 import openfl.filters.ShaderFilter;
 import openfl.system.Capabilities;
