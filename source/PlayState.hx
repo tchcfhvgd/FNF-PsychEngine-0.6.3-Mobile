@@ -3349,6 +3349,7 @@ class PlayState extends MusicBeatState
 					}
 				});
 			}
+			}
 			else
 			{
 				notes.forEachAlive(function(daNote:Note)
