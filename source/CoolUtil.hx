@@ -9,6 +9,7 @@ import flixel.system.FlxSound;
 #if sys
 import sys.io.File;
 import sys.FileSystem;
+import haxe.io.Path;
 #else
 import openfl.utils.Assets;
 #end
