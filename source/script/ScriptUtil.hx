@@ -1,11 +1,6 @@
 package script;
 
 import StringTools;
-import data.ClientPrefs;
-import data.Highscore;
-import data.Paths;
-import data.StageData;
-import data.WeekData;
 import flixel.FlxBasic;
 import flixel.FlxG;
 import flixel.FlxObject;
@@ -20,21 +15,10 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import haxe.Json;
-import objects.Boyfriend;
-import objects.Character;
-import objects.Note;
-import objects.NoteSplash;
-import objects.StrumNote;
 import openfl.Lib;
 import openfl.filters.ShaderFilter;
 import openfl.system.Capabilities;
 import script.Script.ScriptReturn;
-import shaders.FlxRunTimeShader;
-import song.Conductor;
-import song.Section;
-import song.Song;
-import states.game.PlayState;
-import util.CoolUtil;
 #if sys
 import sys.FileSystem;
 import sys.io.File;
