@@ -142,4 +142,42 @@ class CoolUtil
 	public static function last<T>(array:Array<T>):T {
 		return array[array.length - 1];
 	}
+
+	public static function findFilesInPath(path:String, extns:Array<String>, ?filePath:Bool = false, ?deepSearch:Bool = true):Array<String>
+	{
+		var files:Array<String> = [];
+
+		if (FileSystem.exists(path))
+		{
+			for (file in FileSystem.readDirectory(path))
+			{
+				var path = haxe.io.Path.join([path, file]);
+				if (!FileSystem.isDirectory(path))
+				{
+					for (extn in extns)
+					{
+						if (file.endsWith(extn))
+						{
+							if (filePath)
+								files.push(path);
+							else
+								files.push(file);
+						}
+					}
+				}
+				else if (deepSearch) // ! YAY !!!! -lunar
+				{
+					var pathsFiles:Array<String> = findFilesInPath(path, extns);
+
+					for (_ in pathsFiles)
+						files.push(_);
+				}
+			}
+		}
+		return files;
+	}
+	public static inline function getFileStringFromPath(file:String):String
+	{
+	return Path.withoutDirectory(Path.withoutExtension(file));
+	}
 }
