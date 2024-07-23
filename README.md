@@ -20,7 +20,7 @@ otherwise, you can delete the "VIDEOS_ALLOWED" Line on Project.xml
 ## Mobile Credits:
 * Lily - Head Porter
 
-### Mobile Special Thanks
+## Mobile Special Thanks
 * Mihai Alexandru - Author of mobile controls and also his new storage stuff and FlxRuntimeShader is used here
 
 ## Credits:
