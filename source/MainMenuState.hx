@@ -103,7 +103,7 @@ class MainMenuState extends MusicBeatState
 
 		var qqqeb:Float = 1;
 
-		char1 = new FlxSprite(700, .50);
+		char1 = new FlxSprite(700, .100);
 		char1.frames = Paths.getSparrowAtlas('mainmenuchar/storymode');
 		char1.scale.x = qqqeb;
 		char1.scale.y = qqqeb;
