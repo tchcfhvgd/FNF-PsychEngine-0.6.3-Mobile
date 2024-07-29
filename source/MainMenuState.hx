@@ -103,7 +103,7 @@ class MainMenuState extends MusicBeatState
 
 		var qqqeb:Float = 1;
 
-		char1 = new FlxSprite(700, 20);
+		char1 = new FlxSprite(700, 30);
 		char1.frames = Paths.getSparrowAtlas('mainmenuchar/storymode');
 		char1.scale.x = qqqeb;
 		char1.scale.y = qqqeb;
@@ -114,7 +114,7 @@ class MainMenuState extends MusicBeatState
 		char1.antialiasing = ClientPrefs.globalAntialiasing;
 		add(char1);
 
-		char2 = new FlxSprite(700, 20);
+		char2 = new FlxSprite(720, 80);
 		char2.frames = Paths.getSparrowAtlas('mainmenuchar/freeplay');
 		char2.scale.x = qqqeb;
 		char2.scale.y = qqqeb;
@@ -125,7 +125,7 @@ class MainMenuState extends MusicBeatState
 		char2.antialiasing = ClientPrefs.globalAntialiasing;
 		add(char2);
 
-		char3 = new FlxSprite(700, 20);
+		char3 = new FlxSprite(700, 80);
 		char3.frames = Paths.getSparrowAtlas('mainmenuchar/credits');
 		char3.scale.x = qqqeb;
 		char3.scale.y = qqqeb;
@@ -136,7 +136,7 @@ class MainMenuState extends MusicBeatState
 		char3.antialiasing = ClientPrefs.globalAntialiasing;
 		add(char3);
 
-		char4 = new FlxSprite(700, 20);
+		char4 = new FlxSprite(700, 80);
 		char4.frames = Paths.getSparrowAtlas('mainmenuchar/options');
 		char4.scale.x = qqqeb;
 		char4.scale.y = qqqeb;
