@@ -103,16 +103,49 @@ class MainMenuState extends MusicBeatState
 
 		var qqqeb:Float = 1;
 
-		char1 = new FlxSprite(700, 40);
+		char1 = new FlxSprite(700, 20);
 		char1.frames = Paths.getSparrowAtlas('mainmenuchar/storymode');
 		char1.scale.x = qqqeb;
 		char1.scale.y = qqqeb;
 		char1.animation.addByPrefix('idle', "storymode", 24);
 		char1.animation.play('idle');
 		char1.updateHitbox();
-		char1.visible = true;
+		char1.visible = false;
 		char1.antialiasing = ClientPrefs.globalAntialiasing;
 		add(char1);
+
+		char2 = new FlxSprite(700, 20);
+		char2.frames = Paths.getSparrowAtlas('mainmenuchar/freeplay');
+		char2.scale.x = qqqeb;
+		char2.scale.y = qqqeb;
+		char2.animation.addByPrefix('idle', "freeplay", 24);
+		char2.animation.play('idle');
+		char2.updateHitbox();
+		char2.visible = false;
+		char2.antialiasing = ClientPrefs.globalAntialiasing;
+		add(char2);
+
+		char3 = new FlxSprite(700, 20);
+		char3.frames = Paths.getSparrowAtlas('mainmenuchar/credits');
+		char3.scale.x = qqqeb;
+		char3.scale.y = qqqeb;
+		char3.animation.addByPrefix('idle', "credits", 24);
+		char3.animation.play('idle');
+		char3.updateHitbox();
+		char3.visible = false;
+		char3.antialiasing = ClientPrefs.globalAntialiasing;
+		add(char3);
+
+		char4 = new FlxSprite(700, 20);
+		char4.frames = Paths.getSparrowAtlas('mainmenuchar/options');
+		char4.scale.x = qqqeb;
+		char4.scale.y = qqqeb;
+		char4.animation.addByPrefix('idle', "options", 24);
+		char4.animation.play('idle');
+		char4.updateHitbox();
+		char4.visible = false;
+		char4.antialiasing = ClientPrefs.globalAntialiasing;
+		add(char4);
 		
 		// magenta.scrollFactor.set();
 
@@ -201,6 +234,46 @@ class MainMenuState extends MusicBeatState
 
 		var lerpVal:Float = CoolUtil.boundTo(elapsed * 7.5, 0, 1);
 		camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
+
+		if (optionShit[curSelected] == 'story_mode')
+		{
+			char1.visible = true;
+		}
+		else
+		{
+                        char1.visible = false;
+
+		}
+
+                if (optionShit[curSelected] == 'freeplay')
+		{
+			char2.visible = true;
+		}
+		else
+		{
+                        char2.visible = false;
+
+		}
+
+		if (optionShit[curSelected] == 'credits')
+		{
+			char3.visible = true;
+		}
+		else
+		{
+                        char3.visible = false;
+
+		}
+
+		if (optionShit[curSelected] == 'options')
+		{
+			char4.visible = true;
+		}
+		else
+		{
+                        char4.visible = false;
+
+		}
 
 		if (!selectedSomethin)
 		{
