@@ -136,7 +136,7 @@ class MainMenuState extends MusicBeatState
 		char3.antialiasing = ClientPrefs.globalAntialiasing;
 		add(char3);
 
-		char4 = new FlxSprite(670, 230);
+		char4 = new FlxSprite(660, 260);
 		char4.frames = Paths.getSparrowAtlas('mainmenuchar/options');
 		char4.scale.x = qqqeb;
 		char4.scale.y = qqqeb;
