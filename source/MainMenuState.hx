@@ -103,7 +103,7 @@ class MainMenuState extends MusicBeatState
 
 		var qqqeb:Float = 1;
 
-		char1 = new FlxSprite(0, 0);
+		char1 = new FlxSprite(500, 0);
 		char1.frames = Paths.getSparrowAtlas('mainmenuchar/storymode');
 		char1.scale.x = qqqeb;
 		char1.scale.y = qqqeb;
@@ -127,7 +127,7 @@ class MainMenuState extends MusicBeatState
 		for (i in 0...optionShit.length)
 		{
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(180, (i * 140)  + offset);
+			var menuItem:FlxSprite = new FlxSprite(140, (i * 140)  + offset);
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
 			menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[i]);
