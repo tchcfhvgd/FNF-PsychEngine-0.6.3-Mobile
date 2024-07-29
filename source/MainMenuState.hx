@@ -145,7 +145,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.updateHitbox();
 			if(optionShit[i] == 'storymode')
 			{
-				menuitemstuff.x += 20;
+				menuItem.x += 20;
 			}
 		}
 
