@@ -60,8 +60,8 @@ jobs:
           haxelib install tjson
           haxelib install hxjsonast
           haxelib install hscript
-          haxelib install hxCodec 2.6.1
-          haxelib git linc_luajit https://github.com/mcagabe19/linc_luajit-legacy.git
+          haxelib git hxCodec https://github.com/MobilePorting/hxCodec-0.6.3
+          haxelib git linc_luajit https://github.com/MobilePorting/linc_luajit-0.6.3.git
           haxelib install extension-androidtools
           haxelib install hxcpp-debug-server
           haxelib list
@@ -74,7 +74,6 @@ jobs:
           haxelib run lime config JAVA_HOME $JAVA_HOME
           haxelib run lime config ANDROID_SETUP true
           haxelib set openfl 9.1.0
-          haxelib set hxCodec 2.6.1
           haxelib set flixel 4.11.0
           haxelib set flixel-ui 2.4.0
           haxelib set flixel-addons 2.11.0
