@@ -101,9 +101,12 @@ class MainMenuState extends MusicBeatState
 		magenta.color = 0xFFfd719b;
 		//add(magenta);
 
+		var qqqeb:Float = 1;
+
 		char1 = new FlxSprite(0, 0);
 		char1.frames = Paths.getSparrowAtlas('mainmenuchar/storymode');
-		char1.scale = 1;
+		char1.scale.x = qqqeb;
+		char1.scale.y = qqqeb;
 		char1.animation.addByPrefix('idle', "storymode", 24);
 		char1.animation.play('idle');
 		char1.updateHitbox();
