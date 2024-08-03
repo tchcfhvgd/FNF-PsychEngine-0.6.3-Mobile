@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="pibbyIcons.png" width="185" height="509">
+	<SubTexture name="default0000" x="10" y="406" width="118" height="93" frameX="-58" frameY="-5" frameWidth="169" frameHeight="107"/>
+	<SubTexture name="goodAccuracy0000" x="10" y="118" width="163" height="93" frameX="-30" frameY="-5" frameWidth="169" frameHeight="107"/>
+	<SubTexture name="greatAccuracy0000" x="10" y="214" width="163" height="93" frameX="-30" frameY="-5" frameWidth="169" frameHeight="107"/>
+	<SubTexture name="lowAccuracy0000" x="10" y="10" width="165" height="105" frameX="-30" frameY="-1" frameWidth="169" frameHeight="107"/>
+	<SubTexture name="midAccuracy0000" x="10" y="310" width="156" height="93" frameX="-30" frameY="-5" frameWidth="169" frameHeight="107"/>
+</TextureAtlas>
