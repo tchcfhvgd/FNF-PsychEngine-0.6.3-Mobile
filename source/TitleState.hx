@@ -279,10 +279,14 @@ class TitleState extends MusicBeatState
 		// bg.updateHitbox();
 		add(bg);
 
+		var scale:Float = 3;
+		
 		qqqeb = new FlxSprite(0, 0);
                 qqqeb.frames = Paths.getSparrowAtlas('menus/titlescreen/menuInterference');
                 qqqeb.animation.addByPrefix('idle', 'thing', 24, false);
 		qqqeb.animation.play('idle');
+		qqqeb.scale.x = scale;
+		qqqeb.scale.y = scale;
 		qqqeb.updateHitbox();
 		qqqeb.screenCenter();
 		qqqeb.antialiasing = ClientPrefs.globalAntialiasing;
