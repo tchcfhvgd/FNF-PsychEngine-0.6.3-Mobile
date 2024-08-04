@@ -493,7 +493,7 @@ class TitleState extends MusicBeatState
 				
 				timer = FlxEase.quadInOut(timer);
 				
-				titleText.color = FlxColor.BLACK;
+				//titleText.color = FlxColor.BLACK;
 				titleText.alpha = FlxMath.lerp(titleTextAlphas[0], titleTextAlphas[1], timer);
 			}
 			
