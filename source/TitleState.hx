@@ -235,6 +235,7 @@ class TitleState extends MusicBeatState
 	var gfDance:FlxSprite;
 	var danceLeft:Bool = false;
 	var titleText:FlxSprite;
+	var qqqeb:FlxSprite;
 	var swagShader:ColorSwap = null;
 
 	function startIntro()
@@ -271,24 +272,28 @@ class TitleState extends MusicBeatState
 		persistentUpdate = true;
 
 		var bg:FlxSprite = new FlxSprite();
-
-		if (titleJSON.backgroundSprite != null && titleJSON.backgroundSprite.length > 0 && titleJSON.backgroundSprite != "none"){
-			bg.loadGraphic(Paths.image(titleJSON.backgroundSprite));
-		}else{
-			bg.makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
-		}
+		bg.makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 
 		// bg.antialiasing = ClientPrefs.globalAntialiasing;
 		// bg.setGraphicSize(Std.int(bg.width * 0.6));
 		// bg.updateHitbox();
 		add(bg);
 
-		logoBl = new FlxSprite(0, 0);
+		qqqeb = new FlxSprite(0, 0);
+                qqqeb.frames = Paths.getSparrowAtlas('menus/titlescreen/menuInterference');
+                qqqeb.animation.addByPrefix('idle', 'thing', 24, false);
+		qqqeb.animation.play('idle');
+		qqqeb.updateHitbox();
+		qqqeb.screenCenter();
+		qqqeb.antialiasing = ClientPrefs.globalAntialiasing;
+		add(qqqeb);
+		
+		logoBl = new FlxSprite(60, -160);
 		logoBl.frames = Paths.getSparrowAtlas('menus/titlescreen/logobumpin');
-
 		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
 		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24, false);
 		logoBl.animation.play('bump');
+		
 		logoBl.updateHitbox();
 		// logoBl.screenCenter();
 		// logoBl.color = FlxColor.BLACK;
