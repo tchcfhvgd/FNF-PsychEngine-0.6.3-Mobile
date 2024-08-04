@@ -272,19 +272,19 @@ class TitleState extends MusicBeatState
 		persistentUpdate = true;
 
 		var bg:FlxSprite = new FlxSprite();
-		bg.makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+		bg.makeGraphic(FlxG.width, FlxG.height, FlxColor.WHITE);
 
 		// bg.antialiasing = ClientPrefs.globalAntialiasing;
 		// bg.setGraphicSize(Std.int(bg.width * 0.6));
 		// bg.updateHitbox();
-		//add(bg);
+		add(bg);
 
 		var scale:Float = 3;
 		
 		qqqeb = new FlxSprite(0, 0);
                 qqqeb.frames = Paths.getSparrowAtlas('menus/titlescreen/menuInterference');
-                qqqeb.animation.addByPrefix('idle', 'thing', 24, false);
-		qqqeb.animation.play('idle');
+                qqqeb.animation.addByPrefix('bump', 'thing', 24, false);
+		qqqeb.animation.play('bump');
 		qqqeb.scale.x = scale;
 		qqqeb.scale.y = scale;
 		qqqeb.updateHitbox();
